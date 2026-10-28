@@ -4,6 +4,12 @@ A computer graphics project built using Processing, designed to implement intera
 
 ---
 
+## 📄 Project Documentation
+
+[romeo-juliet-robot-actors-processing](./romeo-juliet-robot-actors-processing.pdf)
+
+---
+
 ## 🚀 Key Features
 
 * **Frame-Based Visual Rendering:** Utilizes the draw() function running at a high frame rate to render active dialogue lines dynamically on the canvas.
