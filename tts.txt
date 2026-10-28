@@ -1,0 +1,38 @@
+import guru.ttslib.*;
+
+String[] lines;
+int index = 0;
+
+TTS tts;
+
+void setup() {
+  size(600, 300);
+  background(0);
+  fill(255);
+  textSize(18);
+
+  // Load text file in /data folder
+  lines = loadStrings("script.txt");
+  println("Loaded: " + lines.length + " lines");
+
+  // Create the speaker
+  tts = new TTS();
+}
+
+void draw() {
+  background(0);
+  if (index < lines.length) {
+    text(lines[index], 20, height/2);
+  } else {
+    text("End of script", 20, height/2);
+  }
+}
+
+void mousePressed() {
+  if (index < lines.length) {
+    String line = lines[index];
+    tts.speak(line);  // Speak the text
+    println(line);
+    index++;
+  }
+}
